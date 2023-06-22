@@ -1,0 +1,344 @@
+/* FUENTES */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&family=Ubuntu:wght@300&display=swap");
+
+/* ESTILOS GENERALES */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* FONDO */
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1000;
+}
+
+.background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* header */
+
+header {
+  height: 100vh;
+  color: #ffd700;
+  scroll-snap-align: start;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 25rem;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.menu a {
+  text-decoration: none;
+  color: #028090;
+  font-weight: bold;
+}
+
+.links::after {
+  display: block;
+  content: "";
+  position: relative;
+  background-color: #028090;
+  height: 2px;
+  width: 0%;
+  transition: all 0.2s ease-in-out;
+}
+
+.links:hover::after {
+  width: 100%;
+}
+
+.logo lottie-player {
+  position: fixed !important;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.logo lottie-player:hover {
+  transform: scale(1.1);
+}
+
+.titulo {
+  margin-top: 5.5rem;
+  margin-left: 6rem;
+  color: #f0f3bd;
+  font-family: "Roboto", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.titulo h1 {
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+.titulo h3 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* Contenido SOBRE MI*/
+.section1 {
+  width: 100vw;
+  height: 100vh;
+ background: #028090;
+}
+
+.sobreMi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-basis: calc(100% / 2);
+}
+
+.sobreMi .info,
+.sobreMi .team {
+  padding: 3rem;
+}
+
+.info{
+    border: .4rem solid #f0f3bd;
+    color: #f0f3bd;
+}
+
+.info h4 {
+  font-size: 3rem;
+}
+
+.btn-cv{
+    display: block;
+    margin: auto;
+    border: none;
+    background: transparent;
+    padding: .5rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-cv::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 0 0 50% 50%;
+    width: 100%;
+    height: 0;
+    background: #02c39a;
+    z-index: -1;
+    transition: all .3s ease-in-out;
+}
+
+.btn-cv:hover::before{
+    height: 180%;
+}
+
+.btn-cv a{
+    display: flex;
+    gap: 2rem;
+    text-decoration: none;
+    color: #f0f3bd;
+    transition: all .3s ease-in-out;
+    font-weight: bold;
+}
+
+.btn-cv:hover a{
+    color: #f0f3bd;
+}
+
+
+
+/* CONTENIDO HABILIDADES */
+
+.section2{
+    background-color: #028090;
+    height: auto;
+    width: 100vw;
+    padding-bottom: 3rem;
+}
+
+.habilidades{
+    display: flex;  
+    flex-direction: row;
+    flex-basis: calc(100%/2);
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.actuales,
+.aprendiendo{
+    flex-grow: 1;
+   text-align: center;
+   color: #f0f3bd;
+   font-family: "Roboto", sans-serif;
+   font-family: "Ubuntu", sans-serif;
+}
+
+.actuales h3, 
+.aprendiendo h3{
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 2rem;
+    border-bottom: 3px solid #f0f3bd;
+}
+
+.actuales .caja,
+.aprendiendo .caja{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    background: #02c39a;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.actuales .caja img,
+.aprendiendo .caja img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #f0f3bd;
+    padding: 1rem;
+}
+
+.actuales .caja .logo,
+.aprendiendo .caja .logo{
+    width: 5rem;
+    height: 5rem;
+}
+
+.actuales .nombre,
+.aprendiendo .nombre{
+    align-self: center;
+    font-weight: bold;
+    margin: auto;
+    font-size: 2rem;
+    color: #f0f3bd;
+}
+
+
+/* CONTENIDO PORTAFOLIO */
+.section3{
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background: #028090;
+    padding-top: 2rem;
+}
+
+.section3 h3{
+    text-align: center;
+    color: #f0f3bd;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.portafolio{
+    display: block;
+    margin-top: 4.5rem;
+    position: relative;
+}
+
+.carrousel{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.anterior, .siguiente{
+    text-align: center;
+    width: 4rem;
+    height: 4rem;
+    color: #f0f3bd;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    opacity: 20%;
+}
+
+.anterior:hover, .siguiente:hover{
+  opacity: 100%;
+}
+
+
+.lista{
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+
+
+.lista .elemento img{
+    display: block;
+    text-align: center;
+    margin: auto;
+    object-fit: cover;
+}
+
+.indicadores .glider-dot{
+    display: block;
+    width: 2rem;
+    height: .3rem;
+    background: #f0f3bd;
+    opacity: .7;
+    margin-top: 1rem;
+    border-radius: 0;
+}
+
+.indicadores .glider-dot:hover{
+  opacity: .5;
+}
+
+.indicadores .glider-dot.active{
+  opacity: 1;
+  background: #02c39a;
+}
+
+.github{
+  display: flex;
+  flex-flow: row wrap;
+  color: #02c39a;
+  padding: 1rem;
+  background: rgba(0, 0, 0, .4);
+  justify-content: center;
+  align-items: center;
+}
+
+.github a{
+  z-index: 999;
+}
+
+.github h6{
+  flex-grow: 1;
+  text-align: center;
+}
